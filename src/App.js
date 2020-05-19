@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import "./App.css";
-import Header from "./components/Header"
-import Posts from "./components/Posts"
-import Post from "./components/Post"
-import PostForm from "./components/PostForm"
-import NotFound from "./components/NotFound"
+import Header from "./components/Header";
+import Message from "./components/Message";
+import Posts from "./components/Posts";
+import Post from "./components/Post";
+import PostForm from "./components/PostForm";
+import NotFound from "./components/NotFound";
 
 //need to setup React Router:
 //    npm install react-router-dom */
@@ -17,7 +18,8 @@ import {
 
 class App extends Component {
     state = {
-      posts: []
+      posts: [],
+      message: null
     };
   addNewPost = post => {
     post.id = this.state.posts.length + 1;
@@ -28,8 +30,12 @@ class App extends Component {
         .join("-")
     );
     this.setState({
-      posts: [...this.state.posts, post]
+      posts: [...this.state.posts, post],
+      message: "saved"
     });
+    setTimeout(() => {
+      this.setState({ message: null });
+    }, 1600);
   };
     render() {
         return (
@@ -38,6 +44,9 @@ class App extends Component {
         <Router>
             <div className="App">
                 <Header />
+
+                {this.state.message && <Message type={this.state.message} />}
+
                 <Switch>
                   <Route exact path="/"
                     render={() =>
