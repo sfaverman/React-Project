@@ -25,7 +25,6 @@ class App extends Component {
     message: null
   };
   onLogin = (email, password) => {
-    console.log(email, password);
     firebase
       .auth()
       .signInWithEmailAndPassword(email, password)
@@ -83,8 +82,8 @@ class App extends Component {
         this.setState({ message: null });
       }, 1600);
     }
-  };
-  componentDidMount() {
+ };
+ componentDidMount() {
     const postsRef = firebase.database().ref("posts");
     postsRef.on("value", snapshot => {
       const posts = snapshot.val();
@@ -153,10 +152,10 @@ class App extends Component {
                 this.state.isAuthenticated ? (
                   <PostForm
                     addNewPost={this.addNewPost}
-                    post={{ key: null, slug: "", title: "", content: "" }}
+                    post={{ id: null, slug: "", title: "", content: "" }}
                   />
                 ) : (
-                  <Redirect to="/" />
+                  <Redirect to="/login" />
                 )
               }
             />
@@ -168,6 +167,8 @@ class App extends Component {
                 );
                 if (post && this.state.isAuthenticated) {
                   return <PostForm updatePost={this.updatePost} post={post} />;
+                } else if (post && !this.state.isAuthenticated) {
+                  return <Redirect to="/login" />;
                 } else {
                   return <Redirect to="/" />;
                 }
