@@ -132,3 +132,24 @@ App {
      cursor: pointer;
   }
 
+img {
+    max-width:100%;
+    margin:auto;
+}
+.not-found {
+    text-align: center;
+}
+.weather {
+    max-width: 600px;
+    background-color: #e1e1e1;
+    border-top: 8px solid #26738D;
+    border-bottom: 3px solid #26738D;
+    margin: 20px auto;
+    text-align: center;
+}
+.weather h2 {
+    color: #26738D;
+
+}
+
+

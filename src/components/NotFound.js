@@ -1,18 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Mask from './images/mask404.png';
 
-const NotFound = () => (
-    <article className="not-found container">
-        <h1>404!</h1>
+const notFound = () => (
+    <article className="not-found">
+        <h2>Ooops .. Page Not Found!</h2>
+        <div>
+            <img src={Mask} alt="page not found image" />
+        </div>
+        <h3>Uh-oh... something is wrong here.</h3>
         <p>
-            Content not found.
+            The page you are looking for might have been removed, had its name changed, or is temporary unavailable.
         </p>
         <p>
-            <Link to="/">Return to posts</Link>
+            <Link to="/">Return to Home Page</Link>
         </p>
 
     </article>
 
 );
 
-export default NotFound;
+export default notFound;

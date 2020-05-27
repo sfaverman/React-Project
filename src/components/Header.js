@@ -13,6 +13,9 @@ const Header = ({ isAuthenticated, onLogout }) => (
             <Link to="/new">New Event</Link>
           </li>
           <li>
+            <Link to="/weather">Weather</Link>
+          </li>
+          <li>
             <button
               className="linkLike"
               onClick={e => {

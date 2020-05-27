@@ -13,6 +13,7 @@ import Message from "./components/Message";
 import Posts from "./components/Posts";
 import Post from "./components/Post";
 import PostForm from "./components/PostForm";
+import Weather from "./components/Weather";
 import Login from "./components/Login";
 import NotFound from "./components/NotFound";
 
@@ -122,6 +123,8 @@ class App extends Component {
                 />
               )}
             />
+             <Route exact
+              path="/weather" component={Weather} />
             <Route
               path="/post/:postSlug"
               render={props => {
@@ -173,6 +176,7 @@ class App extends Component {
                 }
               }}
             />
+
             <Route component={NotFound} />
           </Switch>
         </div>
