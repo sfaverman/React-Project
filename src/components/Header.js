@@ -5,12 +5,12 @@ const Header = ({ isAuthenticated, onLogout }) => (
   <header className="App-header">
     <ul className="container">
       <li>
-        <Link to="/">My Site</Link>
+        <Link to="/">Visit San Diego</Link>
       </li>
       {isAuthenticated ? (
         <>
           <li>
-            <Link to="/new">New Post</Link>
+            <Link to="/new">New Event</Link>
           </li>
           <li>
             <button
