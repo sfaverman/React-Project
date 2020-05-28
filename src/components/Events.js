@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Posts = ({ posts, deletePost, isAuthenticated }) => (
+const Events = ({ posts, deletePost, isAuthenticated }) => (
   <article className="posts container">
     <h1>Events</h1>
     <ul>
@@ -9,7 +9,7 @@ const Posts = ({ posts, deletePost, isAuthenticated }) => (
       {posts.map(post => (
         <li key={post.id}>
           <h2>
-            <Link to={`/post/${post.slug}`}>{post.title}</Link>
+            <Link to={`/event/${post.slug}`}>{post.title}</Link>
           </h2>
           {isAuthenticated && (
             <p>
@@ -32,4 +32,4 @@ const Posts = ({ posts, deletePost, isAuthenticated }) => (
   </article>
 );
 
-export default Posts;
+export default Events;

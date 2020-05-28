@@ -1,7 +1,7 @@
 import React from "react";
 import { QuillDeltaToHtmlConverter } from "quill-delta-to-html";
 
-const Post = ({ post }) => {
+const Event = ({ post }) => {
   const converter = new QuillDeltaToHtmlConverter(post.content.ops, {});
   const contentHTML = converter.convert();
 
@@ -16,4 +16,4 @@ const Post = ({ post }) => {
   );
 };
 
-export default Post;
+export default Event;

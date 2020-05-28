@@ -11,9 +11,9 @@ import SimpleStorage from "react-simple-storage";
 import Home from "./components/Home";
 import Header from "./components/Header";
 import Message from "./components/Message";
-import Posts from "./components/Posts";
-import Post from "./components/Post";
-import PostForm from "./components/PostForm";
+import Events from "./components/Events";
+import Event from "./components/Event";
+import EventForm from "./components/EventForm";
 import Attractions from "./components/Attractions";
 import Weather from "./components/Weather";
 import Login from "./components/Login";
@@ -118,7 +118,7 @@ class App extends Component {
               exact
               path="/"
               render={() => (
-                <Posts
+                <Events
                   isAuthenticated={this.state.isAuthenticated}
                   posts={this.state.posts}
                   deletePost={this.deletePost}
@@ -132,13 +132,13 @@ class App extends Component {
              <Route exact
               path="/weather" component={Weather} />
             <Route
-              path="/post/:postSlug"
+              path="/event/:postSlug"
               render={props => {
                 const post = this.state.posts.find(
                   post => post.slug === props.match.params.postSlug
                 );
                 if (post) {
-                  return <Post post={post} />;
+                  return <Event post={post} />;
                 } else {
                   return <Redirect to="/" />;
                 }
@@ -160,7 +160,7 @@ class App extends Component {
               path="/new"
               render={() =>
                 this.state.isAuthenticated ? (
-                  <PostForm
+                  <EventForm
                     addNewPost={this.addNewPost}
                     post={{ key: null, slug: "", title: "", content: "" }}
                   />
@@ -176,7 +176,7 @@ class App extends Component {
                   post => post.slug === props.match.params.postSlug
                 );
                 if (post && this.state.isAuthenticated) {
-                  return <PostForm updatePost={this.updatePost} post={post} />;
+                  return <EventForm updatePost={this.updatePost} post={post} />;
                 } else {
                   return <Redirect to="/" />;
                 }

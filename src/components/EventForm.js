@@ -3,7 +3,7 @@ import { Redirect } from "react-router-dom";
 import Quill from "react-quill";
 import 'react-quill/dist/quill.snow.css';
 
-class PostForm extends Component {
+class EventForm extends Component {
   state = {
     post: {
       key: this.props.post.key,
@@ -83,4 +83,4 @@ class PostForm extends Component {
     );
   }
 }
-export default PostForm;
+export default EventForm;
