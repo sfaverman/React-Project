@@ -10,10 +10,13 @@ const Header = ({ isAuthenticated, onLogout }) => (
       {isAuthenticated ? (
         <>
           <li>
-            <Link to="/new">New Event</Link>
+            <Link to="/home">Home</Link>
           </li>
           <li>
             <Link to="/attractions">Attractions</Link>
+          </li>
+          <li>
+            <Link to="/new">New Event</Link>
           </li>
           <li>
             <Link to="/weather">Weather</Link>

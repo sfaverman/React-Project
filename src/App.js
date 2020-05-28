@@ -8,6 +8,7 @@ import {
 import firebase from "./firebase";
 import SimpleStorage from "react-simple-storage";
 
+import Home from "./components/Home";
 import Header from "./components/Header";
 import Message from "./components/Message";
 import Posts from "./components/Posts";
@@ -124,6 +125,8 @@ class App extends Component {
                 />
               )}
             />
+             <Route exact
+              path="/home" component={Home} />
              <Route exact
               path="/attractions" component={Attractions} />
              <Route exact
