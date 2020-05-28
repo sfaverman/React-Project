@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Header = ({ isAuthenticated, onLogout }) => (
   <header className="App-header">
-    <ul className="container">
+      <ul className="container">
       <li>
         <Link to="/">Visit San Diego</Link>
       </li>
@@ -11,6 +11,9 @@ const Header = ({ isAuthenticated, onLogout }) => (
         <>
           <li>
             <Link to="/new">New Event</Link>
+          </li>
+          <li>
+            <Link to="/attractions">Attractions</Link>
           </li>
           <li>
             <Link to="/weather">Weather</Link>
@@ -33,6 +36,11 @@ const Header = ({ isAuthenticated, onLogout }) => (
         </li>
       )}
     </ul>
+
+ <div>
+
+ </div>
+
   </header>
 );
 export default Header;

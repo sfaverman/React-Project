@@ -13,6 +13,7 @@ import Message from "./components/Message";
 import Posts from "./components/Posts";
 import Post from "./components/Post";
 import PostForm from "./components/PostForm";
+import Attractions from "./components/Attractions";
 import Weather from "./components/Weather";
 import Login from "./components/Login";
 import NotFound from "./components/NotFound";
@@ -24,7 +25,7 @@ class App extends Component {
     isAuthenticated: false,
     posts: [],
     message: null
-  };
+   };
   onLogin = (email, password) => {
     console.log(email, password);
     firebase
@@ -123,6 +124,8 @@ class App extends Component {
                 />
               )}
             />
+             <Route exact
+              path="/attractions" component={Attractions} />
              <Route exact
               path="/weather" component={Weather} />
             <Route

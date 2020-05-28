@@ -9,6 +9,7 @@ App {
 
   .App h1 {
     font-size: 2rem;
+      color: #2c3539;
   }
 
   .App h2 {
@@ -25,11 +26,14 @@ App {
   }
 
 .App-header {
-  background-color: #353944;
+  /*background-color: #353944;*/
   color: #fff;
   font-size: calc(10px + 1vmin);
   padding: 1rem;
-}
+  background: url('./components/images/bg.jpg') no-repeat center center;
+  background-size: cover;
+ }
+
 
   .App-header a {
     color:#fff;
@@ -142,14 +146,79 @@ img {
 .weather {
     max-width: 600px;
     background-color: #e1e1e1;
-    border-top: 8px solid #26738D;
-    border-bottom: 3px solid #26738D;
+    border-top: 8px solid lightseagreen; /*#26738D;*/
+    border-bottom: 3px solid lightseagreen; /* #26738D;*/
     margin: 20px auto;
     text-align: center;
 }
 .weather h2 {
     color: #26738D;
+    font-weight: bold;
 
 }
+main {
+    margin: 10px 20px;
+    text-align: center;
+}
+.gallery {
+    background-color:  #f1f1f1;
+    padding: 1%;
+    margin: 2% 0;
+    display: flex;
+    justify-content: center; /* space-between; */
+    flex-wrap: wrap; /* nowrap*/
 
+}
+.gallery > article, .gallery > div {
+			background-color: #fff;
+			margin: 10px;
+	}
+/* card - rounded corner style */
+.card-rounded {
+	/* Add shadows to create the "card" effect */
+    background-color: lightseagreen !important;
+    color: white;
+    width: 36rem;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    margin: 20px !important;
+    padding: 10px;
+    position: relative;
+}
+.card-rounded:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    background-color: darkseagreen !important;
+}
+.card-rounded img {
+	border-radius: 5px 5px 0 0;
+}
+.gallery img:hover {
+	transform: scale(1.5);
+}
+.card-rounded .btn {
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     min-width: 70%;
+     margin: 10px 15%;
+     border: 2px solid lightseagreen;
+     border-radius: 10px;
+     font-size: 1.2em;
+     font-weight: 400;
+     color: lightseagreen;
+}
+.card-rounded p {
+     padding-bottom: 35px;
+}
 
+@media screen and (min-width: 768px) {
+    .card-rounded {
+        margin-top: 0;
+        width: 18rem;
+    }
+   /*  .card-rounded .btn {
+         margin: 10px 30%;
+    }*/
+}
