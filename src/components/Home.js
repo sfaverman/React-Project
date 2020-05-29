@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Video from './Video.js';
 import Img_head from './images/rocks-ocean-birds-l.jpg';
 import Sun from './images/sun.png';
 
@@ -9,21 +10,28 @@ import Sun from './images/sun.png';
     render() {
         return (
    <main id="home">
-        <section id="welcome">
+            <section id="welcome">
             <img id="img-head" src={Img_head} alt="ocean rocks and birds" />
             <h1>Welcome to Sunny San Diego!</h1>
-            <p>
-                Welcome to Beautiful and dynamic San Diego! On the coast of the Pacific Ocean in Southern California . San Diego is the eighth-largest city in the United State and second-largest city in California.
-                One of the West Coast’s most attractive and under-valued destinations, San Diego is an ultra fun, laid back community revolving around beach life, fine dining, emerging arts and culture.
-            </p>
-            <p>
-               </p>
+
+
             <div className="title">
                 <p>Visit San Diego!</p>
             </div>
-       </section>
+            <section className="grid col2">
+                <div>
+                    <p>
+                        Welcome to Beautiful and dynamic San Diego! On the coast of the Pacific Ocean in Southern California . San Diego is the eighth-largest city in the United State and second-largest city in California.
+                        One of the West Coast’s most attractive and under-valued destinations, San Diego is an ultra fun, laid back community revolving around beach life, fine dining, emerging arts and culture.
+                    </p>
+                </div>
+                <div>
+                    <Video  youtubeId="JzRELkRr4ns\&rel=0" />
+                </div>
+            </section>
+        </section>
 
-    <section>
+        <section>
         <div className="gallery">
          <article className="card">
              <h2> <img class="sun-icon" src={Sun} alt="sun icon" /> Attractions</h2>

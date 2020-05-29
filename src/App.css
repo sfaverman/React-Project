@@ -1,3 +1,6 @@
+body {
+  /*  font-family: 'Roboto';*/
+}
 /* from zgordon app.css */
 App {
     /* text-align: center;*/
@@ -135,7 +138,7 @@ App {
   .App button.linkLike:hover {
      cursor: pointer;
   }
-
+/* Sofia Faverman css addition */
 img {
     max-width:100%;
     margin:auto;
@@ -150,11 +153,20 @@ img {
     border-bottom: 3px solid lightseagreen; /* #26738D;*/
     margin: 20px auto;
     text-align: center;
+    border-radius: 10px;
 }
 .weather h2 {
     color: #26738D;
     font-weight: bold;
 
+}
+.weather p {
+    color: #ff9f00;
+    font-weight: bold;
+}
+.weather .desc {
+    font-size: 1.8em;
+    color: #ff9f00;
 }
 main {
     margin: 10px 20px;
@@ -201,6 +213,9 @@ main {
     display: flex;
     align-content: center;
     align-items: baseline;
+}
+#home p {
+    text-align: left;
 }
 .card-rounded h2, .card h2 {
     margin-top: 0;
@@ -250,6 +265,9 @@ main {
     display: block;
     position: relative;
 }
+#welcome p, #wecome video {
+    margin: 0;
+}
 .title {
      position: absolute;
      display: block;
@@ -265,6 +283,7 @@ main {
      color: #ff9f00;
      padding: 0 20px;
 }
+
 .addNew {
     margin-left: 40%;
     font-size: 20px;
@@ -275,6 +294,52 @@ main {
     padding: 5px 10px;
     border-radius: 5px;
  }
+/*.video {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height:0;
+    overflow: hidden;
+}
+.video iframe {
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height:100%;
+}*/
+#home .video {
+    border: 4px solid #ff9f00;
+}
+.grid  {
+	display: grid;
+	column-gap: 2%;
+	grid-row-gap: 10px;
+    grid-template-columns: 1fr;
+}
+.grid > article, .grid > div, .grid > section {
+	padding: 0 10px;
+}
+nav {
+    font-family: 'Roboto';
+}
+nav a {
+    font-size: 1.2em;
+    text-decoration: none;
+}
+nav a:hover {
+   background-color: #f1f1f1;
+   font-weight: bold;
+   color: #ff9f00;
+    padding: 3px 5px;
+}
+
+@media screen and (min-width: 450px) {
+    .col2 {
+        grid-template-columns: repeat(2, 49%);
+	}
+
+}
 @media screen and (min-width: 600px) {
    .title {
         font-size: 1.8em;
@@ -294,4 +359,9 @@ main {
         font-size: 2em;
        /* margin: 45% 0 0 5%;*/
     }
+    #welcome .col2 p {
+        font-size: 1.1em;
+        text-indent: 20px;
+        /*text-align: center;*/
+}
 }

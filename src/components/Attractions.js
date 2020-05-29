@@ -4,8 +4,14 @@ import Img1 from './images/balboa.jpg';
 import Img2 from './images/coronado.jpg';
 import Img3 from './images/bird-l.jpg';
 import Img4 from './images/la-jolla.jpg';
-import Img5 from './images/elephants.jpg';
+import Img5 from './images/polar-bear.jpg';
 import Img6 from './images/old-town.jpg';
+import Img7 from './images/elephant.jpg';
+import Img8 from './images/zoo.jpg';
+import Img9 from './images/elephants.jpg';
+import Img10 from './images/sea-world.jpg';
+
+import Video from './Video.js';
 
 
 // Create a ES6 class component
@@ -58,9 +64,44 @@ import Img6 from './images/old-town.jpg';
              <article className="card-rounded">
              <h2>Old Town</h2>
              <img src={Img6} alt="old town market" />
-            <p> At the <b> Old Town</b> San Diego State Historic Park, you can travel back in time and soak up some of the rich culture from San Diego's early days. The park recreates the feel of the Mexican and early American periods, from 1821 to 1872, when this settlement grew from a small Mexican pueblo. </p>
+             <p> At the <b> Old Town</b> San Diego State Historic Park, you can travel back in time and soak up some of the rich culture from San Diego's early days. The park recreates the feel of the Mexican and early American periods, from 1821 to 1872, when this settlement grew from a small Mexican pueblo. </p>
             <button className="btn"> Add to Todos
              </button>
+         </article>
+          <article className="card-rounded">
+             <h2>Seaport Village</h2>
+            <Video youtubeId ="do1bsP-6dWA" />
+             <p><b>Seaport Village</b> is a waterfront shopping and dining village complex adjacent to San Diego Bay in downtown San Diego. It also offers events and tours, making it your one-stop for fun. It is a good place to have a meal with a waterfront view or to pick up a souvenir of your visit. </p>
+             <button className="btn"> Add to Todos
+             </button>
+         </article>
+         <article className="card-rounded" >
+             <h2>Mission Valley</h2>
+             <img src={Img8} alt="elefants at zoo" />
+             <p><b>San Diego Zoo</b> is one of the largest and most famous zoos in the United States. Visiting this family-friendly attraction is also one of the top things to do in San Diego with kids. The San Diego Zoo Safari Park immerses you in an active, hands-on safari experience where herds of animals roam natural habitats in a vast reserve. </p>
+             <button className="btn"> Add to Todos
+             </button>
+         </article>
+         <article className="card-rounded">
+             <h2>Safari Park</h2>
+             <img src={Img9} alt="old town market" />
+             <p> At the <b> Old Town</b> San Diego State Historic Park, you can travel back in time and soak up some of the rich culture from San Diego's early days. The park recreates the feel of the Mexican and early American periods, from 1821 to 1872, when this settlement grew from a small Mexican pueblo. </p>
+        <button className="btn"> Add to Todos
+         </button>
+         </article>
+         <article className="card-rounded" >
+             <h2>Legoland</h2>
+             <img src={Img8} alt="elefants at zoo" />
+             <p><b>San Diego Zoo</b> is one of the largest and most famous zoos in the United States. Visiting this family-friendly attraction is also one of the top things to do in San Diego with kids. The San Diego Zoo Safari Park immerses you in an active, hands-on safari experience where herds of animals roam natural habitats in a vast reserve. </p>
+             <button className="btn"> Add to Todos
+             </button>
+         </article>
+         <article className="card-rounded">
+             <h2>Seaword</h2>
+             <img src={Img10} alt="old town market" />
+             <p> At the <b> Old Town</b> San Diego State Historic Park, you can travel back in time and soak up some of the rich culture from San Diego's early days. The park recreates the feel of the Mexican and early American periods, from 1821 to 1872, when this settlement grew from a small Mexican pueblo. </p>
+        <button className="btn"> Add to Todos
+         </button>
          </article>
         </div>
     </section>
