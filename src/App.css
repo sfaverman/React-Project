@@ -265,6 +265,16 @@ main {
      color: #ff9f00;
      padding: 0 20px;
 }
+.addNew {
+    margin-left: 40%;
+    font-size: 20px;
+    /*font-weight: bold;*/
+    text-decoration:none;
+    background-color: lightseagreen;
+    color: #fff !important;
+    padding: 5px 10px;
+    border-radius: 5px;
+ }
 @media screen and (min-width: 600px) {
    .title {
         font-size: 1.8em;

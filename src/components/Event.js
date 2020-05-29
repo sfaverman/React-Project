@@ -7,13 +7,13 @@ const Event = ({ post }) => {
 
   return (
     <article className="post container">
-      <h1>{post.title}</h1>
-      <div
-        className="content"
-        dangerouslySetInnerHTML={{ __html: contentHTML }}
-      />
-    </article>
-  );
+          <h1>{post.title}</h1>
+          <div
+            className="content"
+            dangerouslySetInnerHTML={{ __html: contentHTML }}
+          />
+     </article>
+    );
 };
 
 export default Event;

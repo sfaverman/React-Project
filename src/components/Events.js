@@ -3,9 +3,15 @@ import { Link } from "react-router-dom";
 
 const Events = ({ posts, deletePost, isAuthenticated }) => (
   <article className="posts container">
-    <h1>Events</h1>
+
+    <h1>Events
+     {isAuthenticated && (
+        <Link className="addNew" to="/new-event">+Add New Event</Link>
+      )}
+    </h1>
+
     <ul>
-      {posts.length < 1 && <li key="empty">No posts yet!</li>}
+      {posts.length < 1 && <li key= "empty">No posts yet!</li>}
       {posts.map(post => (
         <li key={post.id}>
           <h2>

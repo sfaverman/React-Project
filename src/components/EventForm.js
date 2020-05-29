@@ -40,7 +40,7 @@ class EventForm extends Component {
   };
   render() {
     if (this.state.saved === true) {
-      return <Redirect to="/" />;
+      return <Redirect to="/events" />;
     }
     return (
       <form className="container" onSubmit={this.handlePostForm}>

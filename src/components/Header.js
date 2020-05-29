@@ -7,37 +7,37 @@ const Header = ({ isAuthenticated, onLogout }) => (
       <li>
         <Link to="/">Visit San Diego</Link>
       </li>
-      {isAuthenticated ? (
-        <>
-          <li>
-            <Link to="/home">Home</Link>
-          </li>
-          <li>
-            <Link to="/attractions">Attractions</Link>
-          </li>
-          <li>
-            <Link to="/new">New Event</Link>
-          </li>
-          <li>
-            <Link to="/weather">Weather</Link>
-          </li>
-          <li>
-            <button
-              className="linkLike"
-              onClick={e => {
-                e.preventDefault();
-                onLogout();
-              }}
-            >
-              Logout
-            </button>
-          </li>
-        </>
-      ) : (
-        <li>
-          <Link to="/login">Login</Link>
-        </li>
-      )}
+      <li>
+        <Link to="/home">Home</Link>
+      </li>
+      <li>
+        <Link to="/attractions">Attractions</Link>
+      </li>
+      <li>
+        <Link to="/events">Events</Link>
+      </li>
+      <li>
+        <Link to="/weather">Weather</Link>
+      </li>
+        {isAuthenticated ? (
+            <>
+              <li>
+                <button
+                  className="linkLike"
+                  onClick={e => {
+                    e.preventDefault();
+                    onLogout();
+                  }}
+                >
+                  Logout
+                </button>
+              </li>
+            </>
+        ) : (
+            <li>
+              <Link to="/login">Login</Link>
+            </li>
+        )}
     </ul>
 
  <div>

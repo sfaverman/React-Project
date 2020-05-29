@@ -114,9 +114,14 @@ class App extends Component {
           />
           {this.state.message && <Message type={this.state.message} />}
           <Switch>
+            <Route exact
+              path="/" component={Home} />
+            <Route exact
+              path="/home" component={Home} />
+            <Route exact
+              path="/attractions" component={Attractions} />
             <Route
-              exact
-              path="/"
+              path="/events"
               render={() => (
                 <Events
                   isAuthenticated={this.state.isAuthenticated}
@@ -125,14 +130,10 @@ class App extends Component {
                 />
               )}
             />
-             <Route exact
-              path="/home" component={Home} />
-             <Route exact
-              path="/attractions" component={Attractions} />
-             <Route exact
+            <Route exact
               path="/weather" component={Weather} />
             <Route
-              path="/event/:postSlug"
+            path="/event/:postSlug"
               render={props => {
                 const post = this.state.posts.find(
                   post => post.slug === props.match.params.postSlug
@@ -140,7 +141,7 @@ class App extends Component {
                 if (post) {
                   return <Event post={post} />;
                 } else {
-                  return <Redirect to="/" />;
+                  return <Redirect to="/events" />;
                 }
               }}
             />
@@ -151,13 +152,13 @@ class App extends Component {
                 !this.state.isAuthenticated ? (
                   <Login onLogin={this.onLogin} />
                 ) : (
-                  <Redirect to="/" />
+                  <Redirect to="/events" />
                 )
               }
             />
             <Route
               exact
-              path="/new"
+              path="/new-event"
               render={() =>
                 this.state.isAuthenticated ? (
                   <EventForm
@@ -165,7 +166,7 @@ class App extends Component {
                     post={{ key: null, slug: "", title: "", content: "" }}
                   />
                 ) : (
-                  <Redirect to="/" />
+                  <Redirect to="/events" />
                 )
               }
             />
@@ -178,7 +179,7 @@ class App extends Component {
                 if (post && this.state.isAuthenticated) {
                   return <EventForm updatePost={this.updatePost} post={post} />;
                 } else {
-                  return <Redirect to="/" />;
+                  return <Redirect to="/events" />;
                 }
               }}
             />
