@@ -140,7 +140,7 @@ img {
     max-width:100%;
     margin:auto;
 }
-.not-found {
+.not-found, footer {
     text-align: center;
 }
 .weather {

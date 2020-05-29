@@ -16,7 +16,9 @@ import Event from "./components/Event";
 import EventForm from "./components/EventForm";
 import Attractions from "./components/Attractions";
 import Weather from "./components/Weather";
+import Todos from "./components/Todos";
 import Login from "./components/Login";
+import Footer from "./components/Footer";
 import NotFound from "./components/NotFound";
 
 import "./App.css";
@@ -145,6 +147,8 @@ class App extends Component {
                 }
               }}
             />
+            <Route exact
+              path="/todos" component={Todos} />
             <Route
               exact
               path="/login"
@@ -186,6 +190,7 @@ class App extends Component {
 
             <Route component={NotFound} />
           </Switch>
+          <Footer />
         </div>
       </Router>
     );

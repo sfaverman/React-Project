@@ -19,6 +19,9 @@ const Header = ({ isAuthenticated, onLogout }) => (
       <li>
         <Link to="/weather">Weather</Link>
       </li>
+      <li>
+        <Link to="/todos">Todos</Link>
+      </li>
         {isAuthenticated ? (
             <>
               <li>
