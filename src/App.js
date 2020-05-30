@@ -14,9 +14,11 @@ import Message from "./components/Message";
 import Events from "./components/Events";
 import Event from "./components/Event";
 import EventForm from "./components/EventForm";
+import Todos from "./components/Todos";
+import Todo from "./components/Todo";
+import TodoForm from "./components/TodoForm";
 import Attractions from "./components/Attractions";
 import Weather from "./components/Weather";
-import Todos from "./components/Todos";
 import Login from "./components/Login";
 import Footer from "./components/Footer";
 import NotFound from "./components/NotFound";
@@ -27,6 +29,7 @@ class App extends Component {
   state = {
     isAuthenticated: false,
     posts: [],
+    todos: [],
     message: null
    };
   onLogin = (email, password) => {
@@ -84,6 +87,41 @@ class App extends Component {
       const postRef = firebase.database().ref("posts/" + post.key);
       postRef.remove();
       this.setState({ message: "deleted" });
+      setTimeout(() => {
+        this.setState({ message: null });
+      }, 1600);
+    }
+  };
+  addNewTodo = todo => {
+    todo.id = this.state.todos.length + 1;
+    todo.slug = this.getNewSlugFromTitle(todo.title);
+    this.setState({
+      todos: [...this.state.todos, todo],
+      message: "saved"
+    });
+    setTimeout(() => {
+      this.setState({ message: null });
+    }, 1600);
+  };
+  updateTodo = todo => {
+    todo.slug = this.getNewSlugFromTitle(todo.title);
+    const index = this.state.todos.findIndex(p => p.id === todo.id);
+    const todos = this.state.todos
+      .slice(0, index)
+      .concat(this.state.todos.slice(index + 1));
+    const newTodos = [...todos, todo].sort((a, b) => a.id - b.id);
+    this.setState({ todos: newTodos, message: "updated" });
+    setTimeout(() => {
+      this.setState({ message: null });
+    }, 1600);
+  };
+  deleteTodo = todo => {
+    if (window.confirm("Delete this todo?")) {
+      const index = this.state.todos.findIndex(p => p.id === todo.id);
+      const todos = this.state.todos
+        .slice(0, index)
+        .concat(this.state.todos.slice(index + 1));
+      this.setState({ todos, message: "deleted" });
       setTimeout(() => {
         this.setState({ message: null });
       }, 1600);
@@ -147,8 +185,14 @@ class App extends Component {
                 }
               }}
             />
-            <Route exact
-              path="/todos" component={Todos} />
+            <Route
+              exact
+              path="/todos"
+              render={() => (
+                <Todos todos={this.state.todos} deleteTodo={this.deleteTodo} />
+              )}
+            />
+
             <Route
               exact
               path="/login"
@@ -160,6 +204,7 @@ class App extends Component {
                 )
               }
             />
+
             <Route
               exact
               path="/new-event"
@@ -184,6 +229,43 @@ class App extends Component {
                   return <EventForm updatePost={this.updatePost} post={post} />;
                 } else {
                   return <Redirect to="/events" />;
+                }
+              }}
+            />
+
+            <Route
+              path="/todo/:todoSlug"
+              render={props => {
+                const todo = this.state.todos.find(
+                  todo => todo.slug === props.match.params.todoSlug
+                );
+                if (todo) {
+                  return <Todo todo={todo} />;
+                } else {
+                  return <Redirect to="/todos" />;
+                }
+              }}
+            />
+            <Route
+              exact
+              path="/new-todo"
+              render={() => (
+                <TodoForm
+                  addNewTodo={this.addNewTodo}
+                  todo={{ id: 0, slug: "", title: "", content: "" }}
+                />
+              )}
+            />
+            <Route
+              path="/update/:todoSlug"
+              render={props => {
+                const todo = this.state.todos.find(
+                  todo => todo.slug === props.match.params.todoSlug
+                );
+                if (todo) {
+                  return <TodoForm updateTodo={this.updateTodo} todo={todo} />;
+                } else {
+                  return <Redirect to="/todos" />;
                 }
               }}
             />

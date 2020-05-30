@@ -1,48 +1,34 @@
-import React, { Component } from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
 
-class Todos extends Component {
-    state = {
-    todos: []
-  }
-  componentDidMount() {
-    fetch('http://jsonplaceholder.typicode.com/todos')
-    .then(res => res.json())
-    .then((data) => {
-      this.setState({ todos: data })
-      console.log(this.state.todos)
-    })
-    .catch(console.log)
-  }
-
- render() {
-
-    return (
-       <div className="container">
-        <div className="col-xs-12">
-        <h2>Todos in San Diego</h2>
-        {this.state.todos.map((todo) => (
-          <div className="card">
-            <div className="card-body">
-              <h5 className="card-title">{todo.title}</h5>
-              <h6 className="card-subtitle mb-2 text-muted">
-              { todo.completed &&
-                <span>
-                Completed
-                </span>
-              }
-              { !todo.completed &&
-                <span>
-                  Pending
-                </span>
-              }
-              </h6>
-            </div>
-          </div>
-        ))}
-        </div>
-       </div>
-    );
-  }
-}
+const Todos = ({ todos, deleteTodo }) => (
+  <article className="posts container">
+    <h1>Todos in San Diego</h1>
+    <Link className="addNew" to="/new-todo">+Add New Todo</Link>
+    <ul>
+      {todos.length < 1 && <li key="empty">No todos yet!</li>}
+      {todos.map(todo => (
+        <li key={todo.id}>
+          <h2>
+            <Link to={`/todo/${todo.slug}`}>{todo.title}</Link>
+          </h2>
+          <p>
+            <Link to={`/update/${todo.slug}`}>Edit</Link>
+            {" | "}
+            <button
+              className="linkLike"
+              onClick={e => {
+                e.preventDefault();
+                deleteTodo(todo);
+              }}
+            >
+              Delete
+            </button>
+          </p>
+        </li>
+      ))}
+    </ul>
+  </article>
+);
 
 export default Todos;

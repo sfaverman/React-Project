@@ -21,7 +21,7 @@ import Sun from './images/sun.png';
             <section className="grid col2">
                 <div>
                     <p>
-                        Welcome to Beautiful and dynamic San Diego! On the coast of the Pacific Ocean in Southern California . San Diego is the eighth-largest city in the United State and second-largest city in California.
+                        Welcome to Beautiful and dynamic San Diego! On the coast of the Pacific Ocean in Southern California. San Diego is the eighth-largest city in the United State and second-largest city in California.
                         One of the West Coast’s most attractive and under-valued destinations, San Diego is an ultra fun, laid back community revolving around beach life, fine dining, emerging arts and culture.
                     </p>
                 </div>
