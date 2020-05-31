@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 import Video from './Video.js';
 import Img_head from './images/rocks-ocean-birds-l.jpg';
@@ -36,12 +37,12 @@ import Sun from './images/sun.png';
          <article className="card">
              <h2> <img className="sun-icon" src={Sun} alt="sun icon" /> Attractions</h2>
              <p> San Diego is known as America&apos;s Finest City which offers a wide array of things to see and do from sandy beaches to bustling nightlife, from the theater to wild animals. The top attractions to visit in San Diego are: Balboa Park; La Jolla Cove; San Diego Zoo; Coronado Island; Old Town; Seaport Village  ... </p>
-             <button className="btn">Read More</button>
+              <Link to="/attractions" className="btn">Read More</Link>
          </article>
          <article className="card">
              <h2><img className="sun-icon" src={Sun} alt="sun icon" /> Events</h2>
              <p><b>Coronado Island</b> has a lot of charm with historic old buildings, fun restaurants, great beaches and beautiful views of the San Diego skyline. The hotel del Coronado is definitely worth staying at or just to go and visit. The beach is pristine and beautiful at sunset for that loved one to walk.  The Coronado Bay Bridge offers excellent view of downtown San Diego and the city of Coronado.  </p>
-             <button className="btn">Read More</button>
+            <Link to="/events" className="btn">Read More</Link>
          </article>
          <article className="card">
              <h2><img className="sun-icon" src={Sun} alt="sun icon" /> Beaches</h2>
