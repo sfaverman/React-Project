@@ -70,21 +70,9 @@ import Video from './Video.js';
              <Link className="btn" to={`/new-todo-title/Visit Seaport Village`}>Add to Todos</Link>
          </article>
          <article className="card-rounded" >
-             <h2>Mission Valley</h2>
-             <img src={Img8} alt="elefants at zoo" />
-             <p><b>San Diego Zoo</b> is one of the largest and most famous zoos in the United States. Visiting this family-friendly attraction is also one of the top things to do in San Diego with kids. The San Diego Zoo Safari Park immerses you in an active, hands-on safari experience where herds of animals roam natural habitats in a vast reserve. </p>
-            <Link className="btn" to={`/new-todo-title/Visit Mission Valley`}>Add to Todos</Link>
-         </article>
-         <article className="card-rounded">
-             <h2>Safari Park</h2>
-             <img src={Img9} alt="old town market" />
-             <p> At the <b> Old Town</b> San Diego State Historic Park, you can travel back in time and soak up some of the rich culture from San Diego's early days. The park recreates the feel of the Mexican and early American periods, from 1821 to 1872, when this settlement grew from a small Mexican pueblo. </p>
-         <Link className="btn" to={`/new-todo-title/Visit Safari Park`}>Add to Todos</Link>
-         </article>
-         <article className="card-rounded" >
              <h2>Legoland</h2>
-             <img src={Img8} alt="elefants at zoo" />
-             <p><b>San Diego Zoo</b> is one of the largest and most famous zoos in the United States. Visiting this family-friendly attraction is also one of the top things to do in San Diego with kids. The San Diego Zoo Safari Park immerses you in an active, hands-on safari experience where herds of animals roam natural habitats in a vast reserve. </p>
+             <Video youtubeId ="rlZ1ANTZXQw" />
+             <p>Enjoy your vacation at <b>LEGOLAND</b> California Resort with tons of LEGO fun for the whole family. This San Diego amusement park with over 60 rides, shows and attractionsis great for families with children ages 2-12. The LEGOLAND Water Park featuring the newest timed water slides and the SEA LIFE® aquarium is right next door. </p>
              <Link className="btn" to={`/new-todo-title/Go to Legoland`}>Add to Todos</Link>
          </article>
          <article className="card-rounded">
