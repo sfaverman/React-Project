@@ -127,6 +127,7 @@ class App extends Component {
       }, 1600);
     }
   };
+
   componentDidMount() {
     const postsRef = firebase.database().ref("posts");
     postsRef.on("value", snapshot => {
@@ -255,6 +256,18 @@ class App extends Component {
                   todo={{ id: 0, slug: "", title: "", content: "" }}
                 />
               )}
+            />
+            <Route
+              exact
+              path="/new-todo-title/:pathTitle"
+                render={props => {
+                const newTitle = props.match.params.pathTitle;
+                console.log("newTitle=",newTitle);
+              return <TodoForm
+                  addNewTodo={this.addNewTodo}
+                  todo={{ id: 0, slug: "", title: newTitle, content: "" }}
+                />;
+              }}
             />
             <Route
               path="/update/:todoSlug"

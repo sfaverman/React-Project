@@ -21,7 +21,7 @@ const Video = ({ youtubeId }) => {
           height: "100%"
         }}
         src={`https://www.youtube.com/embed/${youtubeId}`}
-        frameBorder="0" allowfullscreen
+        allowfullscreen="allowfullscreen" frameBorder="0"
       />
     </div>
   );
