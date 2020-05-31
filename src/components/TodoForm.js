@@ -45,7 +45,7 @@ class TodoForm extends Component {
       <form className="container" onSubmit={this.handleAddNewTodo}>
         <h1>Add a New Todo</h1>
         <p>
-          <label htmlFor="form-title">Title:</label>
+          <label htmlFor="form-title">Task Name:</label>
           <br />
           <input
             defaultValue={this.props.title}
@@ -62,7 +62,7 @@ class TodoForm extends Component {
           />
         </p>
         <p>
-          <label htmlFor="form-content">Content:</label>
+          <label htmlFor="form-content">Task Description:</label>
         </p>
         <Quill
           defaultValue={this.state.todo.content}

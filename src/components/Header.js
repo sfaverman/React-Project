@@ -23,7 +23,7 @@ const Header = ({ isAuthenticated, onLogout }) => (
                 <>
                   <li>
                     <button
-                      className="linkLike"
+                      className="linkLike logout"
                       onClick={e => {
                         e.preventDefault();
                         onLogout();
@@ -35,7 +35,8 @@ const Header = ({ isAuthenticated, onLogout }) => (
                 </>
             ) : (
                 <li>
-                  <Link to="/login">Login</Link>
+                  <Link className="login"
+                to="/login">Login</Link>
                 </li>
             )}
               </ul>

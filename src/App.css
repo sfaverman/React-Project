@@ -1,5 +1,6 @@
 body {
-  /*  font-family: 'Roboto';*/
+  font-family: 'Roboto';
+  line-height: 1.4em;
 }
 /* from zgordon app.css */
 App {
@@ -32,7 +33,7 @@ App {
   /*background-color: #353944;*/
   color: #fff;
   font-size: calc(10px + 1vmin);
-  padding: 1rem;
+  /*padding: 1rem;*/
   background: url('./components/images/bg.jpg') no-repeat center center;
   background-size: cover;
  }
@@ -48,7 +49,7 @@ App {
 
   .App-header li {
     list-style: none;
-    display: inline;
+    display: inline-block;
     padding: 1rem;
     font-weight: bold;
   }
@@ -118,12 +119,20 @@ App {
     min-height: 4rem;
   }
 
-  .App form button[type="submit"] {
+ /* .App form button[type="submit"] {
     border: 1px #ccc solid;
     background: white;
     font-size: 1rem;
     padding: .5rem 1rem;
-  }
+  }*/
+ .App form button[type="submit"] {
+    border: 1px lightseagreen solid;
+    background-color: lightseagreen;
+    color: #fff;
+    font-size: 1rem;
+    padding: .5rem 1rem;
+   /* border-radius: 4px; */
+}
   .App form button[type="submit"]:hover {
     cursor: pointer;
   }
@@ -132,7 +141,7 @@ App {
   border: none;
   font-size: inherit;
   color: #26738D;
-  text-decoration: underline;
+  /*text-decoration: underline;*/
 }
 
   .App button.linkLike:hover {
@@ -261,14 +270,16 @@ main {
 
 
 .card-rounded p, .card p {
-     padding-bottom: 35px;
+     padding: 10px 10px 35px;
 }
-#welcome {
+/*#welcome {
     display: block;
     position: relative;
-}
+}*/
 #welcome p, #wecome video {
     margin: 0;
+    line-height: 1.4em;
+
 }
 .title {
      position: absolute;
@@ -323,7 +334,8 @@ main {
 	padding: 0 10px;
 }
 nav {
-    font-family: 'Roboto';
+   font-family: 'Roboto';
+   margin: 0 10px;
 }
 nav a {
     font-size: 1.2em;
@@ -335,6 +347,16 @@ nav a:hover {
    color: #ff9f00;
     padding: 3px 5px;
 }
+nav .login, nav .logout {
+  text-decoration: none;
+  border: 1px solid lightseagreen;
+  border-radius: 4px;
+ /* float: right; */
+  background-color: #fff;
+  color: #26738D;
+  padding: 2px 5px;
+}
+
 
 @media screen and (min-width: 450px) {
     .col2 {
@@ -347,9 +369,12 @@ nav a:hover {
         font-size: 1.8em;
         margin: 40% 0 0 5%;
     }
+  /*.card-rounded p, .card p {
+         font-size: 1.1em;
+    }*/
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 800px) {
     .card-rounded, .card {
         margin-top: 0;
         width: 18rem;
@@ -361,10 +386,13 @@ nav a:hover {
         font-size: 2em;
        /* margin: 45% 0 0 5%;*/
     }
-    #welcome .col2 p {
+    nav .login, nav .logout {
+       /* margin-left: 100px;*/
+    }
+    #welcome .col2 p, #listAttractions {
         font-size: 1.1em;
-        text-indent: 20px;
+        text-indent: 30px;
         /*text-align: center;*/
         padding-left: 10px;
-}
+    }
 }
