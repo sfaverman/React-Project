@@ -19,6 +19,7 @@ import Todo from "./components/Todo";
 import TodoForm from "./components/TodoForm";
 import Attractions from "./components/Attractions";
 import Weather from "./components/Weather";
+import Shopping from "./components/Shopping";
 import Login from "./components/Login";
 import Footer from "./components/Footer";
 import NotFound from "./components/NotFound";
@@ -173,6 +174,8 @@ class App extends Component {
             />
             <Route exact
               path="/weather" component={Weather} />
+            <Route exact
+              path="/shopping" component={Shopping} />
             <Route
             path="/event/:postSlug"
               render={props => {
@@ -282,8 +285,14 @@ class App extends Component {
                 }
               }}
             />
+            <Route path='/hotels' component={() => {
+            window.location.href = 'https://www.trivago.ca/san-diego-34307/hotel';  return null; }}
+            />
+            <Route path='/restaurants' component={() => {
+            window.location.href = 'https://www.opentable.com/san-diego-restaurants';  return null; }}
+            />
 
-            <Route component={NotFound} />
+           <Route component={NotFound} />
           </Switch>
           <Footer />
         </div>

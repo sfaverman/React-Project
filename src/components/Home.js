@@ -36,7 +36,7 @@ import Sun from './images/sun.png';
         <div className="gallery">
          <article className="card">
              <h2> <img className="sun-icon" src={Sun} alt="sun icon" /> Attractions</h2>
-             <p> San Diego is known as America&apos;s Finest City which offers a wide array of things to see and do from sandy beaches to bustling nightlife, from the theater to wild animals. The top attractions to visit in San Diego are: Balboa Park; La Jolla Cove; San Diego Zoo; Coronado Island; Old Town; Seaport Village  ... </p>
+             <p> San Diego is known as <b>America&apos;s Finest City</b> which offers a wide array of things to see and do from sandy beaches to bustling nightlife, from the theater to wild animals. The top attractions to visit in San Diego are: Balboa Park; La Jolla Cove; San Diego Zoo; Coronado Island; Old Town; Seaport Village  ... </p>
               <Link to="/attractions" className="btn">Read More</Link>
          </article>
          <article className="card">
@@ -46,23 +46,23 @@ import Sun from './images/sun.png';
          </article>
          <article className="card">
              <h2><img className="sun-icon" src={Sun} alt="sun icon" /> Beaches</h2>
-             <p>Year-round sunshine and miles of beautiful surf-washed coastline make San Diego a perfect place to visit for a beach vacation. Want to take the kids for a day of sun, sand, and sea? The best family-friendly beaches are Del Mar, Silver Strand, Coronado Beach, and La Jolla Shores. </p>
+             <p>Year-round sunshine and miles of beautiful surf-washed coastline make San Diego a perfect place to visit for a <b>beach vacation</b>. Want to take the kids for a day of sun, sand, and sea? The best family-friendly beaches are Del Mar, Silver Strand, Coronado Beach, and La Jolla Shores. </p>
              <button className="btn">Read More</button>
          </article>
          <article className="card">
              <h2><img className="sun-icon" src={Sun} alt="sun icon" /> Shopping</h2>
-             <p><b>La Jolla.</b>There is a reason La Jolla, California is known as The Jewel of America’s Finest City! With a rich history steeped in the fantastical tales of Dr. Seuss and old Hollywood, our small coastal town is one of the most unique in all of San Diego County.  </p>
+             <p>San Diego has a variety of <b>shopping malls</b> dotted all around the city and county. A trip to the mall in San Diego can mean a little shopping, something to eat, and then a movie experience, all without having to drive between. San Diego includes several historically rich locations for fascinating and fun shopping experiences. </p>
              <button className="btn">Read More</button>
          </article>
          <article className="card" >
              <h2><img className="sun-icon" src={Sun} alt="sun icon" />Restaurants</h2>
-             <p><b>San Diego Zoo</b> is one of the largest and most famous zoos in the United States. Visiting this family-friendly attraction is also one of the top things to do in San Diego with kids. The San Diego Zoo Safari Park immerses you in an active, hands-on safari experience where herds of animals roam natural habitats in a vast reserve. </p>
-             <button className="btn">Read More</button>
-         </article>
+             <p>From stylish dining rooms to hip beachside eats, the <b>best restaurants</b> in San Diego are exploding with creativity and bonafide kitchen chops and a gloriously sunny climate means dining al fresco or in chic, open-air interiors. So if you’re headed to San Diego, make sure to bring your beach towel and your appetite. </p>
+            <Link to="/restaurants" className="btn" target="_blank">Read More</Link>
+            </article>
              <article className="card">
              <h2><img className="sun-icon" src={Sun} alt="sun icon" /> Hotels</h2>
              <p> At the <b> Old Town</b> San Diego State Historic Park, you can travel back in time and soak up some of the rich culture from San Diego's early days. The park recreates the feel of the Mexican and early American periods, from 1821 to 1872, when this settlement grew from a small Mexican pueblo. </p>
-            <button className="btn">Read More</button>
+             <Link to="/hotels" className="btn" target="_blank">Read More</Link>
          </article>
         </div>
     </section>

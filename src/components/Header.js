@@ -14,8 +14,12 @@ const Header = ({ isAuthenticated, onLogout }) => (
             <Link to="/events">Events</Link>
           </li>
           <li>
+            <Link to="/shopping">Shopping</Link>
+          </li>
+          <li>
             <Link to="/weather">Weather</Link>
           </li>
+
           <li>
             <Link to="/todos">Todos</Link>
           </li>

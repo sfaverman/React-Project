@@ -66,7 +66,7 @@ import Video from './Video.js';
           <article className="card-rounded">
              <h2>Seaport Village</h2>
             <Video youtubeId ="do1bsP-6dWA" />
-             <p><b>Seaport Village</b> is a waterfront shopping and dining village complex adjacent to San Diego Bay in downtown San Diego. It also offers events and tours, making it your one-stop for fun. It is a good place to have a meal with a waterfront view or to pick up a souvenir of your visit. </p>
+             <p><b>Seaport Village</b> is conveniently located near downtown along San Diego Bay, is a great place to walk along the waterfront overlooking the ships, boats and yachts among fun shops and restaurants. It also offers events and tours, making it your one-stop for fun. It is a good place to have a meal with a waterfront view or to pick up a souvenir of your visit. </p>
              <Link className="btn" to={`/new-todo-title/Visit Seaport Village`}>Add to Todos</Link>
          </article>
          <article className="card-rounded" >
