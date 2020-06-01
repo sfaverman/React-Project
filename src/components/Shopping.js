@@ -1,8 +1,5 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-
-import Img3 from './images/bird-l.jpg';
-
 import Video from './Video.js';
 
 

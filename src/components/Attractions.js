@@ -7,8 +7,6 @@ import Img3 from './images/bird-l.jpg';
 import Img4 from './images/la-jolla.jpg';
 import Img5 from './images/polar-bear.jpg';
 import Img6 from './images/old-town.jpg';
-import Img8 from './images/zoo.jpg';
-import Img9 from './images/elephants.jpg';
 
 import Video from './Video.js';
 
