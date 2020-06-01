@@ -291,6 +291,9 @@ class App extends Component {
             <Route path='/restaurants' component={() => {
             window.location.href = 'https://www.opentable.com/san-diego-restaurants';  return null; }}
             />
+            <Route path='/beaches' component={() => {
+            window.location.href = 'https://www.thecrazytourist.com/15-best-beaches-san-diego/';  return null; }}
+            />
 
            <Route component={NotFound} />
           </Switch>

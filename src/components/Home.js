@@ -47,12 +47,12 @@ import Sun from './images/sun.png';
          <article className="card">
              <h2><img className="sun-icon" src={Sun} alt="sun icon" /> Beaches</h2>
              <p>Year-round sunshine and miles of beautiful surf-washed coastline make San Diego a perfect place to visit for a <b>beach vacation</b>. Want to take the kids for a day of sun, sand, and sea? The best family-friendly beaches are Del Mar, Silver Strand, Coronado Beach, and La Jolla Shores. </p>
-             <button className="btn">Read More</button>
+             <Link to="/beaches" className="btn" target="_blank">Read More</Link>
          </article>
          <article className="card">
              <h2><img className="sun-icon" src={Sun} alt="sun icon" /> Shopping</h2>
              <p>San Diego has a variety of <b>shopping malls</b> dotted all around the city and county. A trip to the mall in San Diego can mean a little shopping, something to eat, and then a movie experience, all without having to drive between. San Diego includes several historically rich locations for fascinating and fun shopping experiences. </p>
-             <button className="btn">Read More</button>
+              <Link to="/shopping" className="btn">Read More</Link>
          </article>
          <article className="card" >
              <h2><img className="sun-icon" src={Sun} alt="sun icon" />Restaurants</h2>
