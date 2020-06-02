@@ -1,0 +1,5 @@
+# Redirects from what the browser requests to what we serve
+/hotels            https://www.trivago.ca/san-diego-34307/hotel
+/restaurants       https://www.opentable.com/san-diego-restaurants
+/beaches           https://www.thecrazytourist.com/15-best-beaches-san-diego/
+          
