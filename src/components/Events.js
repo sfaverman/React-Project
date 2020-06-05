@@ -14,8 +14,10 @@ const Events = ({ posts, deletePost, isAuthenticated }) => (
       {posts.length < 1 && <li key= "empty">No posts yet!</li>}
       {posts.map(post => (
         <li key={post.id}>
+
           <h2>
-            <Link to={`/event/${post.slug}`}>{post.title}</Link>
+            <span class="eventDate">{post.date}</span>
+            <Link to={`/event/${post.slug}`}>  {post.title}</Link>
           </h2>
           {isAuthenticated && (
             <p>

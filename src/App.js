@@ -75,6 +75,7 @@ class App extends Component {
     const postRef = firebase.database().ref("posts/" + post.key);
     postRef.update({
       slug: this.getNewSlugFromTitle(post.title),
+      date: post.date,
       title: post.title,
       content: post.content
     });
@@ -139,6 +140,7 @@ class App extends Component {
           key: post,
           slug: posts[post].slug,
           title: posts[post].title,
+          date: posts[post].date,
           content: posts[post].content
         });
       }
@@ -216,7 +218,7 @@ class App extends Component {
                 this.state.isAuthenticated ? (
                   <EventForm
                     addNewPost={this.addNewPost}
-                    post={{ key: null, slug: "", title: "", content: "" }}
+                    post={{ key: null, slug: "", title: "", date: "", content: "" }}
                   />
                 ) : (
                   <Redirect to="/events" />

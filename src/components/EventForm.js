@@ -9,6 +9,7 @@ class EventForm extends Component {
       key: this.props.post.key,
       slug: this.props.post.slug,
       title: this.props.post.title,
+      date: this.props.post.date,
       content: this.props.post.content
     },
     saved: false
@@ -20,6 +21,7 @@ class EventForm extends Component {
           key: this.props.post.key,
           slug: this.props.post.slug,
           title: this.props.post.title,
+          date: this.props.post.date,
           content: this.props.post.content
         }
       });
@@ -44,7 +46,7 @@ class EventForm extends Component {
     }
     return (
       <form className="container" onSubmit={this.handlePostForm}>
-        <h1>Add a New Post</h1>
+        <h1>Add a New Event</h1>
         <p>
           <label htmlFor="form-title">Title:</label>
           <br />
@@ -57,6 +59,23 @@ class EventForm extends Component {
                 post: {
                   ...this.state.post,
                   title: e.target.value
+                }
+              })
+            }
+          />
+        </p>
+        <p>
+          <label htmlFor="form-date">Date:</label>
+          <br />
+          <input
+            defaultValue={this.props.title}
+            id="form-date" type="date"
+            value={this.state.post.date}
+            onChange={e =>
+              this.setState({
+                post: {
+                  ...this.state.post,
+                  date: e.target.value
                 }
               })
             }

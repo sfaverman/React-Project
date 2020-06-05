@@ -381,6 +381,12 @@ nav .login, nav .logout {
   padding: 2px 5px;
 }
 
+.eventDate {
+    color: #ff9f00;
+    margin-right: 20px;
+    text-decoration: none !important;
+}
+
 
 @media screen and (min-width: 450px) {
     .col2 {
