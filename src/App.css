@@ -136,6 +136,8 @@ App {
 }
   .App form button[type="submit"]:hover {
     cursor: pointer;
+    background-color: darkseagreen;
+    border-color: darkseagreen;
   }
 
 .App button.linkLike {
@@ -180,8 +182,11 @@ img {
 }
 main {
     margin: 10px 20px;
-    text-align: center;
 }
+main h1, #shopping > p {
+     text-align: center;
+}
+
 .gallery {
     background-color:  #f1f1f1;
     padding: 1%;
@@ -216,12 +221,10 @@ main {
 #home .card h2 {
     background-color: #ff9f00 !important;
     border-top-left-radius: 25px;
-    padding: 5px;
-    padding-right: 50%;
-    padding-left: 25%;
+    padding: 5px 50% 5px 25%;
     display: flex;
     align-content: center;
-    align-items: baseline;
+    align-items: center;
 }
 #home p {
     text-align: left;
@@ -283,10 +286,11 @@ main {
     text-indent: 1em;
 }
 #shopping .card-rounded p {
-    text-indent: 0;
+    text-indent: 30px;
     padding-bottom: 0;
 }
 #shopping .card-rounded p:last-of-type {
+    text-indent: 0px;
     padding-bottom: 35px;
 }
 /*#welcome {
@@ -324,6 +328,9 @@ main {
     padding: 5px 10px;
     border-radius: 5px;
  }
+.addNew:hover {
+    background-color: darkseagreen;
+}
 /*.video {
     position: relative;
     padding-bottom: 56.25%;
@@ -357,9 +364,13 @@ main {
 .grid > article, .grid > div, .grid > section {
 	padding: 0 10px;
 }
-nav {
+/*nav {
    font-family: 'Roboto';
-   margin: 0 10px;
+}*/
+nav ul {
+    width: 90%;
+    margin: auto;
+    text-align: center;
 }
 nav a {
     font-size: 1.2em;
@@ -383,7 +394,7 @@ nav .login, nav .logout {
 ul.events h2 {
     font-size: 1.2em;
     display: inline-block;
-    max-width: 70%;
+    max-width: 75%;
 }
 ul.events li {
     border-bottom: .7px dotted lightseagreen;
@@ -411,9 +422,9 @@ ul.events li:first-of-type {
     .col2 {
         grid-template-columns: repeat(2, 49%);
 	}
-    .asideLeft {
+    /* .asideLeft {
 
-		grid-template-columns: 1fr 5fr;		}
+		grid-template-columns: 1fr 5fr;		}*/
      .eventDate {
          border-right: 2px solid #ff9f00;
          min-width: 70px;
@@ -445,10 +456,9 @@ ul.events li:first-of-type {
     nav .login, nav .logout {
        /* margin-left: 100px;*/
     }
-    #welcome .col2 p, #listAttractions  {
+    #welcome .col2 p, #listAttractions p  {
         font-size: 1.1em;
         text-indent: 30px;
-        /*text-align: center;*/
         padding-left: 10px;
     }
     ul.events h2 {
