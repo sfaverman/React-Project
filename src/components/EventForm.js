@@ -69,7 +69,7 @@ class EventForm extends Component {
           <br />
           <input
             defaultValue={this.props.title}
-            id="form-date" type="date"
+            id="form-date" type="date" required
             value={this.state.post.date}
             onChange={e =>
               this.setState({
@@ -82,7 +82,7 @@ class EventForm extends Component {
           />
         </p>
         <p>
-          <label htmlFor="form-content">Content:</label>
+          <label htmlFor="form-content">Description:</label>
         </p>
         <Quill
           defaultValue={this.state.post.content}

@@ -31,7 +31,8 @@ class App extends Component {
     isAuthenticated: false,
     posts: [],
     todos: [],
-    message: null
+    message: null,
+    months:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
    };
   onLogin = (email, password) => {
     console.log(email, password);
@@ -131,7 +132,8 @@ class App extends Component {
   };
 
   componentDidMount() {
-    const postsRef = firebase.database().ref("posts");
+    const postsRef =
+  firebase.database().ref("posts").orderByChild("date");
     postsRef.on("value", snapshot => {
       const posts = snapshot.val();
       const newStatePosts = [];
@@ -143,7 +145,8 @@ class App extends Component {
           date: posts[post].date,
           content: posts[post].content
         });
-      }
+     }
+
       this.setState({ posts: newStatePosts });
     });
   }
@@ -171,6 +174,7 @@ class App extends Component {
                   isAuthenticated={this.state.isAuthenticated}
                   posts={this.state.posts}
                   deletePost={this.deletePost}
+                  months={this.state.months}
                 />
               )}
             />

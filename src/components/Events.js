@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Events = ({ posts, deletePost, isAuthenticated }) => (
+const Events = ({ posts, deletePost, isAuthenticated, months }) => (
   <article className="posts container">
 
     <h1>Events
@@ -14,13 +14,12 @@ const Events = ({ posts, deletePost, isAuthenticated }) => (
       {posts.length < 1 && <li key= "empty">No posts yet!</li>}
       {posts.map(post => (
         <li key={post.id}>
-
           <h2>
-            <span class="eventDate">{post.date}</span>
+            <span className="eventDate">{months[post.date.substr(5,2)-1]} {} {post.date.substr(8,2)}</span>
             <Link to={`/event/${post.slug}`}>  {post.title}</Link>
           </h2>
           {isAuthenticated && (
-            <p>
+            <p className="eventBtns" >
               <Link to={`/edit/${post.slug}`}>Edit</Link>
               {" | "}
               <button
@@ -38,6 +37,7 @@ const Events = ({ posts, deletePost, isAuthenticated }) => (
       ))}
     </ul>
   </article>
+
 );
 
 export default Events;

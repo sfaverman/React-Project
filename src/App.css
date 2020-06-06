@@ -382,9 +382,15 @@ nav .login, nav .logout {
 }
 
 .eventDate {
-    color: #ff9f00;
+    display: inline-block;
+    color: lightseagreen;
     margin-right: 20px;
     text-decoration: none !important;
+    border-right: 2px solid #ff9f00;
+    padding-right: 20px;
+}
+.eventBtns {
+    margin-left: 110px;
 }
 
 
@@ -392,6 +398,9 @@ nav .login, nav .logout {
     .col2 {
         grid-template-columns: repeat(2, 49%);
 	}
+    .asideLeft {
+
+		grid-template-columns: 1fr 5fr;		}
 
 }
 @media screen and (min-width: 600px) {
