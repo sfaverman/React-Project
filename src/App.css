@@ -380,15 +380,27 @@ nav .login, nav .logout {
   color: #26738D;
   padding: 2px 5px;
 }
-
+ul.events h2 {
+    font-size: 1.2em;
+    display: inline-block;
+    max-width: 70%;
+}
+ul.events li {
+    border-bottom: .7px dotted lightseagreen;
+}
+ul.events li:first-of-type {
+    border-top: .7px dotted lightseagreen;
+}
 .eventDate {
     display: inline-block;
     color: lightseagreen;
-    margin-right: 20px;
+    margin: 5px 20px 0 0;
     text-decoration: none !important;
-    border-right: 2px solid #ff9f00;
-    padding-right: 20px;
-    min-width: 70px;
+    padding-right: 10px;
+    width: 100%;
+    font-size: 1.2em;
+    font-weight: bold;
+
 }
 .eventBtns {
     margin-left: 110px;
@@ -402,6 +414,11 @@ nav .login, nav .logout {
     .asideLeft {
 
 		grid-template-columns: 1fr 5fr;		}
+     .eventDate {
+         border-right: 2px solid #ff9f00;
+         min-width: 70px;
+         max-width: 70px;
+    }
 
 }
 @media screen and (min-width: 600px) {
@@ -409,6 +426,8 @@ nav .login, nav .logout {
         font-size: 1.8em;
         margin: 40% 0 0 5%;
     }
+
+
   }
 
 @media screen and (min-width: 800px) {
@@ -432,5 +451,9 @@ nav .login, nav .logout {
         /*text-align: center;*/
         padding-left: 10px;
     }
+    ul.events h2 {
+    font-size: 1.4em;
+    display: inline-block;
+}
 
 }
