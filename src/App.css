@@ -388,6 +388,7 @@ nav .login, nav .logout {
     text-decoration: none !important;
     border-right: 2px solid #ff9f00;
     padding-right: 20px;
+    min-width: 70px;
 }
 .eventBtns {
     margin-left: 110px;
