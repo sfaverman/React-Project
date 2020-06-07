@@ -68,7 +68,7 @@ class EventForm extends Component {
           <label htmlFor="form-date">Date:</label>
           <br />
           <input
-            defaultValue={this.props.title}
+            defaultValue={this.props.date}
             id="form-date" type="date" required
             value={this.state.post.date}
             onChange={e =>

@@ -277,6 +277,7 @@ main h1, #shopping > p {
 .card .btn {
      border: 2px solid #ff9f00;
      color: #ff9f00;
+     text-align: center;
 }
 
 
@@ -437,8 +438,9 @@ ul.events li:first-of-type {
         font-size: 1.8em;
         margin: 40% 0 0 5%;
     }
-
-
+    .col3{
+        grid-template-columns: repeat(3, 32%);
+    }
   }
 
 @media screen and (min-width: 800px) {
@@ -446,7 +448,7 @@ ul.events li:first-of-type {
         margin-top: 0;
         width: 18rem;
     }
-    /*  .card-rounded .btn {
+   /*  .card-rounded .btn {
          margin: 10px 30%;
     }*/
     .title {

@@ -14,10 +14,13 @@ const Events = ({ posts, deletePost, isAuthenticated, months }) => (
       {posts.length < 1 && <li key= "empty">No posts yet!</li>}
       {posts.map(post => (
         <li key={post.id}>
-          <p className="eventDate">{months[post.date.substr(5,2)-1]} {} {post.date.substr(8,2)}</p>
-          <h2>
-            <Link to={`/event/${post.slug}`}>  {post.title}</Link>
-          </h2>
+          <div className="asideLeft">
+              <p className="eventDate">{months[post.date.substr(5,2)-1]} {} {post.date.substr(8,2)}</p>
+              <h2>
+
+                <Link to={`/event/${post.slug}`}>  {post.title}</Link>
+              </h2>
+          </div>
           {isAuthenticated && (
             <p className="eventBtns" >
               <Link to={`/edit/${post.slug}`}>Edit</Link>
