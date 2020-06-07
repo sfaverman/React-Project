@@ -310,7 +310,7 @@ main h1, #shopping > p {
      top: 0;
      left: 0;
      max-width: 90%;
-     margin: 35% 0 0 10%;
+     margin: 40% 0 0 10%;
   /*   border: 2px solid #353944;*/
      font-family: 'Roboto';
      font-size: 1.2em;
@@ -369,19 +369,19 @@ main h1, #shopping > p {
    font-family: 'Roboto';
 }*/
 nav ul {
-    width: 90%;
-    margin: auto;
+  /*  width: 90%;*/
+   /* margin: auto;*/
     text-align: center;
 }
 nav a {
-    font-size: 1.2em;
+    font-size: 1.1em;
     text-decoration: none;
 }
 nav a:hover {
    background-color: #f1f1f1;
    font-weight: bold;
    color: #ff9f00;
-    padding: 3px 5px;
+   padding: 3px 5px;
 }
 nav .login, nav .logout {
   text-decoration: none;
@@ -390,7 +390,7 @@ nav .login, nav .logout {
  /* float: right; */
   background-color: #fff;
   color: #26738D;
-  padding: 2px 5px;
+  padding: 3px 5px;
 }
 ul.events h2 {
     font-size: 1.2em;
@@ -435,8 +435,8 @@ ul.events li:first-of-type {
 }
 @media screen and (min-width: 600px) {
    .title {
-        font-size: 1.8em;
-        margin: 40% 0 0 5%;
+        font-size: 2em;
+        margin: 42% 0 0 5%;
     }
     .col3{
         grid-template-columns: repeat(3, 32%);
@@ -452,8 +452,8 @@ ul.events li:first-of-type {
          margin: 10px 30%;
     }*/
     .title {
-        font-size: 2em;
-       /* margin: 45% 0 0 5%;*/
+        font-size: 2.4em;
+        margin: 45% 0 0 5%;
     }
     nav .login, nav .logout {
        /* margin-left: 100px;*/
